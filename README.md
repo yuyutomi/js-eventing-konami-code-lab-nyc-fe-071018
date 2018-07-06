@@ -24,10 +24,6 @@ In `index.html`, you'll see that the JavaScript file is already being loaded in 
 <script src="konami_code.js"></script>
 ```
 
-This is JavaScript's way of pulling in code from outside the page. We've given the
-`<script>` tag a local source (the file that's in the same directory). We could also
-supply a URL to load an external resource, but we'll talk more about that a little later.
-
 - Attach an event listener to `document.body` and check for `'keydown'` events. 
   - If the user enters this special code, pressing all ten of the keys in the correct order, `alert()` a congratulatory message. 
   - If they press a key out of sequence or a key that isn't part of the Konami code, don't `alert()` anything and simply keep listening for all ten `keydown`s in the correct order.
