@@ -28,11 +28,10 @@ This is JavaScript's way of pulling in code from outside the page. We've given t
 `<script>` tag a local source (the file that's in the same directory). We could also
 supply a URL to load an external resource, but we'll talk more about that a little later.
 
-1. Attach an event listener to `document.body` and check for `'keydown'` events. 
-2. a. If the user enters this special code, pressing all ten of the keys in the correct order, `alert()` a congratulatory message. 
-   b. If they press a key out of sequence or a key that isn't part of the Konami code, don't `alert()` anything and simply keep listening for all ten `keydown`s in the correct order.
-
-Remember to call `init()` when you're testing code in the browser to attach the event listener and set everything up!
+- Attach an event listener to `document.body` and check for `'keydown'` events. 
+  - If the user enters this special code, pressing all ten of the keys in the correct order, `alert()` a congratulatory message. 
+  - If they press a key out of sequence or a key that isn't part of the Konami code, don't `alert()` anything and simply keep listening for all ten `keydown`s in the correct order.
+*Remember to call `init()` when you're testing code in the browser to attach the event listener and set everything up!*
 
 Here's a short example to help you get started:
 ```js
