@@ -70,7 +70,7 @@ to check out the value of `e.detail`, `e.which`, and `e.location`.
 handler might pass us the string representation of the number, which wouldn't work so well
 with our comparisons.
 
-* JavaScript [key codes](http://keycode.info/)
+* JavaScript [key codes](http://keycode.info/) in case you want to put together your own custom key sequence!
 
 ## Resources
 - [Konami Code](https://en.wikipedia.org/wiki/Konami_Code)
