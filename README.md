@@ -28,6 +28,7 @@ You will need to:
 - Attach an event listener to `document.body` and check for `'keydown'` events. 
   - If the user enters this special code, pressing all ten of the keys in the correct order, `alert()` a congratulatory message. 
   - If they press a key out of sequence or a key that isn't part of the Konami code, don't `alert()` anything and simply keep listening for all ten `keydown`s in the correct order.
+  
 *Remember to call `init()` when you're testing code in the browser to attach the event listener and set everything up!*
 
 Here's a short example to help you get started:
