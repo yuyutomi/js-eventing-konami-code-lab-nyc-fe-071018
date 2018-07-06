@@ -16,7 +16,7 @@ function init() {
 
 This array contains the famous [Konami Code](https://en.wikipedia.org/wiki/Konami_Code)
 as keyboard event values. The Konami Code is a well-known button combination in the video
-game community that unlocks special features. It's become a common Easter egg for web sites
+game community that unlocks special features. The up-up-down-down-left-right-left-right-B-A key combination has become a common Easter egg for web sites
 to have hidden features behind this code, and now you get to implement it!
 
 In `index.html`, you'll see that the JavaScript file is already being loaded in for you:
@@ -25,14 +25,16 @@ In `index.html`, you'll see that the JavaScript file is already being loaded in 
 ```
 
 This is JavaScript's way of pulling in code from outside the page. We've given the
-`<script>` tag a local source (the file that's right here in the directory). We could also
-supply a URL to load an external resource, but we'll talk more on that in a bit.
+`<script>` tag a local source (the file that's in the same directory). We could also
+supply a URL to load an external resource, but we'll talk more about that a little later.
 
-Attach an event listener to `document.body` and check for `'keydown'` events. If the user enters this special code, pressing all ten of the keys in the correct order, `alert()` a congratulatory message. However, if they press a key out of sequence or a key that isn't part of the Konami code, don't `alert()` anything and simply keep listening for all ten `keydown`s in the correct order.
+1. Attach an event listener to `document.body` and check for `'keydown'` events. 
+2. a. If the user enters this special code, pressing all ten of the keys in the correct order, `alert()` a congratulatory message. 
+   b. If they press a key out of sequence or a key that isn't part of the Konami code, don't `alert()` anything and simply keep listening for all ten `keydown`s in the correct order.
 
-When you're testing the code out in the browser, be sure to call `init()` to attach the event listener and set everything up!
+Remember to call `init()` when you're testing code in the browser to attach the event listener and set everything up!
 
-Here's a contrived, short example to help you get started:
+Here's a short example to help you get started:
 ```js
 // Key codes for A, B, and C keys.
 const alphabet = [65, 66, 67];
@@ -61,15 +63,17 @@ function onKeyDownHandler(e) {
 Have fun!
 
 #### Hints
-Be aware that we're looking at both `e.detail` and `e.which`. In modern browsers, `e.which` is usually sufficient; however, it's not universally supported, it's technically
+* Be aware that we're looking at both `e.detail` and `e.which`. In modern browsers, `e.which` is usually enough; however, it's not universally supported, it's technically
 deprecated, and it sometimes exhibits finicky behavior in the test suite. To be safe, you
 might want to check `e.detail` or `e.location`. Or, to be safest, read the latest in the
 [`keydown` reference on MDN][keydown]. This would be a good chance to use `console.log()`
 to check out the value of `e.detail`, `e.which`, and `e.location`.
 
-Also note that we're calling `parseInt` on the key value. This is because the event
+* Also note that we're calling `parseInt` on the key value. This is because the event
 handler might pass us the string representation of the number, which wouldn't work so well
 with our comparisons.
+
+* JavaScript [key codes](http://keycode.info/)
 
 ## Resources
 - [Konami Code](https://en.wikipedia.org/wiki/Konami_Code)
